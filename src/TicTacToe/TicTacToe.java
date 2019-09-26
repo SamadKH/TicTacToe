@@ -8,21 +8,21 @@ public class TicTacToe {
 
     public static void main(String[] args) {
 
-        TicTacToeTest t = new TicTacToeTest();
-        Scanner s = new Scanner(System.in);
+        TicTacToeTest test = new TicTacToeTest();
+        Scanner scanner = new Scanner(System.in);
         int x = 0, y = 0;
         do {
-            System.out.println(t.player == t.X ? "Player X turn" : "Player O turn");
+            System.out.println(test.player == test.X ? "Player X turn" : "Player O turn");
             System.out.println("Enter x and y places");
-            x = s.nextInt();
-            y = s.nextInt();
+            x = scanner.nextInt();
+            y = scanner.nextInt();
 
-            t.putSign(x, y);
-            System.out.println(t.toString());
+            test.putSign(x, y);
+            System.out.println(test.toString());
             System.out.println("_____________________________");
-            t.displayWinner();
+            test.displayWinner();
 
-        } while (t.isEmpty);
+        } while (test.isEmpty);
     }
 }
 
